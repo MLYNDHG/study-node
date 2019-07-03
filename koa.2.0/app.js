@@ -1,4 +1,4 @@
-let Koa = require("koa");
+let Koa = require("koa");//express框架的2.0版本  引入为class  -->new
 
 const app = new Koa();
 
