@@ -10,6 +10,7 @@ function readStatic(url, dir) {
     const requestPath = ctx.request.path;
     if (requestPath.startsWith(url)) {
       let fullpath = path.join(dir, requestPath.substring(url.length));
+      //上方引入的mz/fs   封装了fs  可以使用async  await  不用使用promise   与   回调
       if (await fs.exists(fullpath)) {
         //mime查看类型
         ctx.response.type = mime.lookup(requestPath);

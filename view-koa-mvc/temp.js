@@ -32,7 +32,7 @@ function temp(path, opts) {
   return async (ctx, next) => {
     ctx.render = function (view, model) {
       ctx.response.body = env.render(view, Object.assign({}, ctx.state || {}, model || {}));
-      ctx.response.type = 'text.html';
+      ctx.response.type = 'text/html';
     }
     await next();
   }
