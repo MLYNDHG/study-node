@@ -3,8 +3,8 @@ module.exports = {
     this.code = code;
     this.message = message;
   },
-  restify: (pathPrefix) => {
-    pathPrefix = pathPrefix || 'api';
+  restify: function (pathPrefix) {
+    pathPrefix = pathPrefix || '/api/';
     return async (ctx, next) => {
       if (ctx.request.path.startsWith(pathPrefix)) {
         ctx.rest = (data) => {

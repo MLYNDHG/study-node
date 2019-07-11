@@ -19,6 +19,10 @@ module.exports = function () {
         const path = key.substring(5);
         router.post(path, obj[key]);
         console.log(`register key mapping :POST${path}`);
+      } else if (key.startsWith('DELETE')) {
+        const path = key.substring(7);
+        router.post(path, obj[key]);
+        console.log(`register key mapping :POST${path}`);
       } else {
         console.log(`invalid URL:${key}`);
       }

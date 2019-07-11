@@ -1,0 +1,44 @@
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>微信公众号</title>
+
+<head></head>
+
+<script src="./Vue.min.js"></script>
+<script src="./vue-resource.min.js"></script>
+
+<body>
+  <div id="app">
+    <form action='/api/createProduct' method='post'>
+      <p>name:<input type='text' name='name'></p>
+      <p>price:<input type='password' name='price'></p>
+      <p><input type='submit' value='Login'></p>
+    </form>
+  </div>
+</body>
+
+<script>
+  let app = new Vue({
+    el: '#app',
+    data() {
+      return {}
+    },
+    computed: {},
+    created() {
+      this.getdata();
+    },
+    methods: {
+      getdata() {
+        this.$resource('/api/getProductById/1').get().then(function (res) {
+          console.log(res);
+        });
+      }
+    },
+    mounted() {}
+
+  });
+</script>
+
+</html>
