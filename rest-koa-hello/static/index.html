@@ -1,44 +1,52 @@
 <html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>微信公众号</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>微信公众号</title>
 
-<head></head>
+  <head></head>
 
-<script src="./Vue.min.js"></script>
-<script src="./vue-resource.min.js"></script>
+  <script src="./Vue.min.js"></script>
+  <script src="./vue-resource.min.js"></script>
 
-<body>
-  <div id="app">
-    <form action='/api/createProduct' method='post'>
-      <p>name:<input type='text' name='name'></p>
-      <p>price:<input type='password' name='price'></p>
-      <p><input type='submit' value='Login'></p>
-    </form>
-  </div>
-</body>
+  <body>
+    <div id="app">
+      <form action="/api/createProduct" method="post">
+        <p>name:<input type="text" name="name" /></p>
+        <p>price:<input type="password" name="price" /></p>
+        <p><input type="submit" value="Login" /></p>
+      </form>
+    </div>
+  </body>
 
-<script>
-  let app = new Vue({
-    el: '#app',
-    data() {
-      return {}
-    },
-    computed: {},
-    created() {
-      this.getdata();
-    },
-    methods: {
-      getdata() {
-        this.$resource('/api/getProductById/1').get().then(function (res) {
-          console.log(res);
-        });
-      }
-    },
-    mounted() {}
-
-  });
-</script>
-
+  <script>
+    let app = new Vue({
+      el: "#app",
+      data() {
+        return {};
+      },
+      computed: {},
+      created() {
+        this.getdata();
+      },
+      methods: {
+        getdata() {
+          //使用resource来执行请求
+          // this.$resource('/api/getProductById/1').get().then(function (res) {
+          //   console.log(res);
+          // });
+          //使用原生ajax请求来发起请求
+          let xmlhttp = new XMLHttpRequest();
+          xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState === 4 && xmlhttp.status == 200) {
+              console.log(xmlhttp.responseText);
+            }
+          };
+          xmlhttp.open("GET", "/api/getProductById/1");
+          xmlhttp.send();
+        }
+      },
+      mounted() {}
+    });
+  </script>
 </html>
