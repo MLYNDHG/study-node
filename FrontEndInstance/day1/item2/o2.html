@@ -7,74 +7,36 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>换肤</title>
 </head>
-<style>
-  html {
-    height: 100%
-  }
-
-  body {
-    height: 100%
-  }
-
-  .container {
-    height: 100%;
-    width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  .button {
-    overflow: hidden;
-  }
-
-  .button {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .Nav {
-    list-style-type: none;
-    margin-top: 40px;
-    padding: 0;
-  }
-
-  li {
-    float: left;
-  }
-
-  .Nav li {
-    width: 80px;
-    height: 20px;
-    border: 1px black solid;
-  }
-
-  .button li {
-    width: 20px;
-    height: 20px;
-    background-color: #ffffff;
-    border: 5px solid;
-    margin-right: 10px;
-  }
-</style>
+<link rel="stylesheet" type="text/css" href="./02.css">
 
 <body class="ChangeColor">
-  <div class="ChangeColor container">
+  <div class="container">
     <ul class="button">
-      <li title="红色">1</li>
-      <li title="黄色">2</li>
-      <li title="绿色">3</li>
+      <!-- #FDD -->
+      <li title="红色" style="border: 5px solid red;background-color: #FFF;" onclick="changeColor('#FDD','red',event)">
+      </li>
+      <!-- #A3C5A8 -->
+      <li title="黄色" style="border: 5px solid yellow;background-color: yellow;"
+        onclick="changeColor('#ffffc7','yellow',event)">
+      </li>
+      <!-- #A3C5A8 -->
+      <li title="绿色" style="border: 5px solid green;background-color: green;"
+        onclick="changeColor('#A3C5A8','green',event)">
+      </li>
     </ul>
 
-    <ul class="Nav">
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
-      <li>4</li>
-      <li>5</li>
-      <li>6</li>
+    <ul class=" Nav">
+      <li>新闻</li>
+      <li>娱乐</li>
+      <li>体育</li>
+      <li>电影</li>
+      <li>音乐</li>
+      <li>旅游</li>
     </ul>
   </div>
 </body>
+<script src="./02.js">
+
+</script>
 
 </html>

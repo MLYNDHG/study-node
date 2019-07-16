@@ -1,0 +1,14 @@
+.container {
+  width: 30%;
+  margin: 0 auto;
+}
+
+button {
+  margin-top: 20px;
+}
+
+span {
+  margin-top: 20px;
+  color: red;
+  font-size: 30px;
+}

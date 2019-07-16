@@ -1,0 +1,10 @@
+.container {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.changeDiv {
+  display: flex;
+  justify-content: center;
+}

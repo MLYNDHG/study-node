@@ -1,0 +1,53 @@
+html {
+  height: 100%
+}
+
+body {
+  height: 100%
+}
+
+.container {
+  height: 100%;
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button {
+  overflow: hidden;
+}
+
+.button {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Nav {
+  list-style-type: none;
+  margin-top: 40px;
+  padding: 0;
+}
+
+li {
+  float: left;
+}
+
+.Nav li {
+  width: 80px;
+  height: 20px;
+  border: 1px black solid;
+  background-color: red;
+  cursor: pointer;
+}
+
+.button li {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.ChangeColor {
+  background-color: #FDD;
+}

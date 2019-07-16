@@ -1,0 +1,14 @@
+.container {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container div {
+  width: 200px;
+  height: 200px;
+  background: black;
+  color: #fff;
+  font-size: 14px;
+  border: 10px solid black;
+}
