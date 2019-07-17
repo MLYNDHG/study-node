@@ -1,0 +1,22 @@
+.container {
+  width: 500px;
+  margin: 0 auto;
+  border: 2px solid;
+}
+
+.title ul {
+  margin: 0;
+  padding: 0;
+  height: 30px;
+  list-style-type: none;
+  background-color: #000;
+}
+
+.title ul li {
+  float: left;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,38 @@
+.container {
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.title {
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.showImg {
+  display: block !important;
+  top: -10px;
+  left: -10px;
+  z-index: 1;
+}
+
+img {
+  position: absolute;
+  cursor: crosshair;
+}
+
+.content div {
+  position: relative;
+  width: 100px;
+  margin: 10px;
+  background-color: #999;
+  height: 100px;
+  border: 1px solid;
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  width: 50%;
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container div {
+  margin-top: 20px;
+  /* position: relative; */
+}
+
+button {
+  margin-right: 75px;
+}
+
+.changeDiv {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  color: #fff;
+}

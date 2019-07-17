@@ -1,0 +1,36 @@
+.container {
+  width: 290px;
+  margin: 0 auto;
+  background-color: #eaeaea;
+  padding: 5px;
+}
+
+.mounth {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Article div {
+  margin: 5px;
+  width: 276px;
+  border: 1px solid;
+}
+
+.Article div span {
+  display: block;
+}
+
+.container .mounth div {
+  border: 1px solid black;
+  margin: 5px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #424242;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+}
