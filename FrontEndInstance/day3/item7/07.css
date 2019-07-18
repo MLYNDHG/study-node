@@ -1,0 +1,64 @@
+.container {
+  width: 332px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid black;
+  background-color: #181818;
+  color: #fff;
+}
+
+.history {
+  width: 328px;
+  height: 15px;
+  text-align: right;
+  font-size: 15px;
+  background-color: #dce0c5;
+}
+
+.now {
+  width: 328px;
+  height: 50px;
+  text-align: right;
+  font-size: 30px;
+  background-color: #dce0c5;
+}
+
+#pressBtn {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+#pressBtn div {
+  margin: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 8%;
+}
+
+#pressBtn button {
+  width: 70px;
+  height: 40px;
+  border-radius: 8%;
+  cursor: pointer;
+}
+
+.dengyu {
+  position: absolute;
+  height: 100px !important;
+}
+
+.zero {
+  width: 150px !important;
+}
+
+.fh {
+  background-color: #ee7815;
+  color: #fff;
+}
+
+.num {
+  background-color: #000;
+  color: #fff;
+  font-size: 20px;
+}

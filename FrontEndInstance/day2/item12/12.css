@@ -1,0 +1,36 @@
+.container {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.ckeckBox {
+  margin: 0 auto;
+  width: 170px;
+  border: 1px solid black;
+  height: 250px;
+  border-radius: 5%;
+  background-color: #fff;
+}
+
+.Tip {
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+}
+
+span {
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+.AllColtrol {
+  margin: 10px;
+}
