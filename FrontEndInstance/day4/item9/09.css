@@ -1,4 +1,34 @@
 .container {
-  width: 40%;
+  width: 55%;
   margin: 0 auto;
+  display: flex;
+}
+
+.img {
+  position: relative;
+  margin-left: 10px;
+  width: 19px;
+  height: 19px;
+  background: url('./start.png') no-repeat;
+  /* background-position: 0 -27px; */
+}
+
+.show {
+  background-position: 0 -27px;
+}
+
+.tip {
+  left: -80px;
+  padding: 7px 10px 0;
+  font-size: 12px;
+  position: absolute;
+  top: 20px;
+  width: 159px;
+  height: 60px;
+  background: url('./ico.gif') no-repeat;
+  display: none;
+}
+
+.title {
+  margin-left: 100px;
 }

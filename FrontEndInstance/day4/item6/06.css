@@ -1,4 +1,30 @@
 .container {
-  width: 40%;
+  width: 300px;
   margin: 0 auto;
+  border: 2px solid #f60;
+}
+
+.container-head {
+  border-bottom: 2px solid #f60;
+  background-color: #ffebd7;
+}
+
+.container-body {
+  background-color: #fef4eb;
+  text-align: center;
+}
+
+input {
+  background: #fffdec;
+}
+
+button {
+  color: #fff;
+  width: 104px;
+  height: 31px;
+  cursor: pointer;
+  font-size: 16px;
+  background: #f60;
+  line-height: 31px;
+  border-radius: 5px;
 }

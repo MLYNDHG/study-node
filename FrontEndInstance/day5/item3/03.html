@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./03.css">
+</head>
+
+<body>
+  <div class="container">
+    <pre>
+      &lt;script&gt;
+      const text = document.getElementsByClassName('text')[0];
+
+      document.onkeydown = function (event) {
+        var event = event || window.event;
+        text.innerHTML = event.keyCode;
+        return false;
+      };
+      &lt;/script&gt;
+    </pre>
+    <p class="text">这里将显示您按下键的 keyCode</p>
+  </div>
+</body>
+<script src="./03.js"></script>
+
+</html>
