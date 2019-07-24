@@ -1,0 +1,39 @@
+html,
+body {
+  margin: 0;
+  background-color: #000;
+}
+
+.container {
+  width: 350px;
+  left: 200px;
+  top: 200px;
+  height: 150px;
+  position: absolute;
+  background: #333;
+  border: 2px solid #ccc;
+}
+
+.head {
+  cursor: move;
+  text-align: right;
+  background: #222;
+  width: 350px;
+  height: 35px;
+  border-bottom: 2px solid #ccc;
+  line-height: 35px;
+}
+
+.head span {
+  cursor: pointer;
+  color: #fff;
+  padding-right: 10px;
+}
+
+.child span {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  color: #fff;
+  font-size: 12px;
+}

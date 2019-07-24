@@ -2,3 +2,46 @@
   width: 40%;
   margin: 0 auto;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  border: 1px solid;
+  list-style-type: none;
+  width: 60px;
+  height: 65px;
+  text-align: right;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.cut {
+  position: absolute;
+  top: -4;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url('./download.png')
+}
+
+.copy {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url('./download.png');
+  background-position: 0 25px;
+}
+
+.clone {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  background: url('./download.png');
+  background-position: 0 50px;
+}
