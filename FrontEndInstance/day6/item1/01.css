@@ -32,7 +32,6 @@ body {
 
 .child span {
   display: flex;
-  flex-direction: column;
   margin: 15px;
   color: #fff;
   font-size: 12px;
