@@ -37,14 +37,14 @@ body {
 .first-line div img {
   margin-left: 15px;
   border-radius: 5px;
-  opacity: 0.4;
 }
 
-.second-line input {
+.second-line textarea {
   margin-top: 15px;
   width: 496px;
   height: 100px;
   border-radius: 5px;
+  resize: none;
 }
 
 .third-line {
@@ -69,12 +69,10 @@ body {
 }
 
 .discuss {
-  opacity: 0;
   transition: all 1s;
   padding: 15px;
   display: flex;
   border-bottom: 1px dashed;
-  height: 0;
 }
 
 .leftImg {
@@ -84,7 +82,32 @@ body {
 
 .rightAricale {
   margin-left: 20px;
-  width: 470px;
+  width: 420px;
   display: flex;
   flex-direction: column;
+}
+
+.rightAricale span {
+  word-wrap: break-word;
+}
+
+#time {
+  display: flex;
+  justify-content: space-between;
+}
+
+#time a {
+  color: #889db6;
+  text-decoration: none;
+}
+
+
+.active {
+  opacity: 1;
+  border: 1px solid orange;
+}
+
+.native {
+  opacity: 0.4;
+  border: 0;
 }
