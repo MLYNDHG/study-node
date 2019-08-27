@@ -2,10 +2,10 @@ const firstLine = document.getElementsByClassName('first-line')[0];
 const body = document.getElementById('body');
 const TextNum = document.getElementById('TextNum');
 const button = document.getElementsByTagName('button')[0];
-const discusses = document.getElementsByClassName('discuss');
+let discusses = document.getElementsByClassName('discuss');
 const input = document.getElementsByTagName('input')[0];
 const textarea = document.getElementsByTagName('textarea')[0];
-const As = document.getElementById('time').getElementsByTagName('a');
+let As = document.getElementsByClassName('del');
 
 
 const imgs = firstLine.getElementsByTagName('img');
@@ -32,7 +32,18 @@ for (const img of imgs) {
     imgsrc = img.src;
   });
 }
+for (let index = 0; index < discusses.length; index++) {
+  const discuss = discusses[index];
+  discuss.onmouseover = function () {
+    As[index].style.display = 'block';
+  }
 
+  discuss.onmouseout = function () {
+    As[index].style.display = 'none';
+  }
+
+}
+//点击按钮
 button.addEventListener('click', function () {
   if (input.value.length < 2) {
     alert('输入昵称');
@@ -66,27 +77,40 @@ button.addEventListener('click', function () {
      </div>
      <div class="rightAricale">
      ${dis}      
-      <span id="time"><span>${Month}月${day}日  ${Hours}:${Minutes}</span><a class="del" href="javascript:;" style="display: none;">删除</a></span>
+      <span class="time"><span>${Month}月${day}日  ${Hours}:${Minutes}</span><a class="del" href="javascript:;" style="display: none;">删除</a></span>
       </div>
    </div>`);
   input.value = '';
   textarea.value = '';
-
+  refalsh();
 });
+//重新渲染事件
+function refalsh() {
+  discusses = document.getElementsByClassName('discuss');
+  As = document.getElementsByClassName('del');
+  for (let index = 0; index < discusses.length; index++) {
+    const discuss = discusses[index];
+    discuss.onmouseover = function () {
+      As[index].style.display = 'block';
+    }
 
-for (let index = 0; index < discusses.length; index++) {
-  const discuss = discusses[index];
-  discuss.addEventListener('mouseover', function () {
-    As[index].style.display = 'block';
-  });
-  discuss.addEventListener('mouseout', function () {
-    As[index].style.display = 'none';
-  });
+    discuss.onmouseout = function () {
+      As[index].style.display = 'none';
+    }
+
+    As[index].onclick = function () {
+      // body.removeChild(discusses[index]);
+      discusses[index].style.display = 'none';
+      refalsh();
+    };
+  }
 }
 
+//给a标签添加事件
 for (let index = 0; index < As.length; index++) {
   const a = As[index];
-  a.addEventListener('click', function () {
-
-  });
+  a.onclick = function () {
+    // body.removeChild(discusses[index].style.display = 'block';);
+    discusses[index].style.display = 'none';
+  };
 }
