@@ -1,7 +1,6 @@
 const config = require('./config'); //引入
 const Sequelize = require('sequelize'); //引入
 
-
 //第一步，创建一个sequelize对象实例
 var sequelize = new Sequelize(config.database, config.username, config.password, {
   host: config.host,
@@ -29,16 +28,16 @@ var hero = sequelize.define('hero', {
 
 //三  新增数据    create
 //三.1 promise添加数据
-hero.create({
-  id: null,
-  name: '无极剑圣',
-  hp: 390,
-  damage: 150
-}).then(res => {
-  console.log(`create` + res);
-}).catch(err => {
-  console.log(`failes` + err);
-});
+// hero.create({
+//   id: null,
+//   name: '无极剑圣',
+//   hp: 390,
+//   damage: 150
+// }).then(res => {
+//   console.log(`create` + res);
+// }).catch(err => {
+//   console.log(`failes` + err);
+// });
 //三.2  async+await添加数据    
 // (
 //   async () => {
@@ -80,10 +79,11 @@ hero.update({
   }
 });
 
-
 //六  删除数据  destroy
 hero.destroy({
   where: {
-    id: 22
+    id: {
+      $gte: 7 //条件看文档
+    }
   }
 })
